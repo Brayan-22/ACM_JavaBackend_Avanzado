@@ -1,0 +1,349 @@
+{
+  "libros": [
+    {
+      "isbn": "978-84-0001",
+      "titulo": "Fundamentos de Java",
+      "autor": "Martin Fowler",
+      "anio": 2018,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0002",
+      "titulo": "Patrones de Diseño Modernos",
+      "autor": "Martin Fowler",
+      "anio": 2022,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0003",
+      "titulo": "Historia del Tiempo",
+      "autor": "Stephen Hawking",
+      "anio": 1988,
+      "genero": "CIENCIA",
+      "copiasTotales": 4
+    },
+    {
+      "isbn": "978-84-0004",
+      "titulo": "Breves Respuestas a las Grandes Preguntas",
+      "autor": "Stephen Hawking",
+      "anio": 2018,
+      "genero": "CIENCIA",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0005",
+      "titulo": "Sapiens",
+      "autor": "Yuval Noah Harari",
+      "anio": 2014,
+      "genero": "HISTORIA",
+      "copiasTotales": 5
+    },
+    {
+      "isbn": "978-84-0006",
+      "titulo": "Homo Deus",
+      "autor": "Yuval Noah Harari",
+      "anio": 2016,
+      "genero": "NO_FICCION",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0007",
+      "titulo": "Clean Code",
+      "autor": "Robert C. Martin",
+      "anio": 2008,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 4
+    },
+    {
+      "isbn": "978-84-0008",
+      "titulo": "Clean Architecture",
+      "autor": "Robert C. Martin",
+      "anio": 2017,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0009",
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "anio": 1949,
+      "genero": "FICCION",
+      "copiasTotales": 4
+    },
+    {
+      "isbn": "978-84-0010",
+      "titulo": "Rebelion en la Granja",
+      "autor": "George Orwell",
+      "anio": 1945,
+      "genero": "FICCION",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0011",
+      "titulo": "El Gen Egoista",
+      "autor": "Richard Dawkins",
+      "anio": 1976,
+      "genero": "CIENCIA",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0012",
+      "titulo": "El Programador Pragmatico",
+      "autor": "Andrew Hunt",
+      "anio": 1999,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0013",
+      "titulo": "Refactoring",
+      "autor": "Martin Fowler",
+      "anio": 1999,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0014",
+      "titulo": "Cosmos",
+      "autor": "Carl Sagan",
+      "anio": 1980,
+      "genero": "CIENCIA",
+      "copiasTotales": 4
+    },
+    {
+      "isbn": "978-84-0015",
+      "titulo": "El Mundo y Sus Demonios",
+      "autor": "Carl Sagan",
+      "anio": 1995,
+      "genero": "NO_FICCION",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0016",
+      "titulo": "Los Pilares de la Tierra",
+      "autor": "Ken Follett",
+      "anio": 1989,
+      "genero": "FICCION",
+      "copiasTotales": 3
+    },
+    {
+      "isbn": "978-84-0017",
+      "titulo": "Una Breve Historia de Casi Todo",
+      "autor": "Bill Bryson",
+      "anio": 2003,
+      "genero": "NO_FICCION",
+      "copiasTotales": 2
+    },
+    {
+      "isbn": "978-84-0018",
+      "titulo": "Java Concurrencia Avanzada",
+      "autor": "Brian Goetz",
+      "anio": 2006,
+      "genero": "TECNOLOGIA",
+      "copiasTotales": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "U001",
+      "nombre": "Ana Gomez",
+      "email": "ana.gomez@mail.com",
+      "nivel": "BASICO"
+    },
+    {
+      "id": "U002",
+      "nombre": "Luis Martinez",
+      "email": "luis.martinez@mail.com",
+      "nivel": "PREMIUM"
+    },
+    {
+      "id": "U003",
+      "nombre": "Carla Rojas",
+      "email": "carla.rojas@mail.com",
+      "nivel": "INVESTIGADOR"
+    },
+    {
+      "id": "U004",
+      "nombre": "Pedro Sanchez",
+      "email": "pedro.sanchez@mail.com",
+      "nivel": "BASICO"
+    },
+    {
+      "id": "U005",
+      "nombre": "Maria Lopez",
+      "email": "maria.lopez@mail.com",
+      "nivel": "PREMIUM"
+    },
+    {
+      "id": "U006",
+      "nombre": "Jorge Ramirez",
+      "email": "jorge.ramirez@mail.com",
+      "nivel": "INVESTIGADOR"
+    }
+  ],
+  "prestamos": [
+    {
+      "libroIsbn": "978-84-0001",
+      "usuarioId": "U001",
+      "fechaInicio": "2026-02-20",
+      "fechaDevolucion": "2026-03-19",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0002",
+      "usuarioId": "U002",
+      "fechaInicio": "2026-02-25",
+      "fechaDevolucion": "2026-03-27",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0003",
+      "usuarioId": "U003",
+      "fechaInicio": "2026-01-10",
+      "fechaDevolucion": "2026-03-11",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0004",
+      "usuarioId": "U004",
+      "fechaInicio": "2026-02-01",
+      "fechaDevolucion": "2026-02-15",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0005",
+      "usuarioId": "U005",
+      "fechaInicio": "2026-03-01",
+      "fechaDevolucion": "2026-03-31",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0006",
+      "usuarioId": "U006",
+      "fechaInicio": "2026-01-01",
+      "fechaDevolucion": "2026-03-02",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0007",
+      "usuarioId": "U001",
+      "fechaInicio": "2026-02-28",
+      "fechaDevolucion": "2026-03-14",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0008",
+      "usuarioId": "U002",
+      "fechaInicio": "2026-01-15",
+      "fechaDevolucion": "2026-02-14",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0009",
+      "usuarioId": "U003",
+      "fechaInicio": "2026-02-10",
+      "fechaDevolucion": "2026-04-11",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0010",
+      "usuarioId": "U004",
+      "fechaInicio": "2026-02-20",
+      "fechaDevolucion": "2026-03-06",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0011",
+      "usuarioId": "U005",
+      "fechaInicio": "2026-01-20",
+      "fechaDevolucion": "2026-02-19",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0012",
+      "usuarioId": "U006",
+      "fechaInicio": "2026-03-05",
+      "fechaDevolucion": "2026-05-04",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0013",
+      "usuarioId": "U001",
+      "fechaInicio": "2026-01-05",
+      "fechaDevolucion": "2026-01-19",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0014",
+      "usuarioId": "U002",
+      "fechaInicio": "2026-02-01",
+      "fechaDevolucion": "2026-03-03",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0015",
+      "usuarioId": "U003",
+      "fechaInicio": "2026-01-25",
+      "fechaDevolucion": "2026-03-26",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0016",
+      "usuarioId": "U004",
+      "fechaInicio": "2026-02-05",
+      "fechaDevolucion": "2026-02-19",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0017",
+      "usuarioId": "U005",
+      "fechaInicio": "2026-03-10",
+      "fechaDevolucion": "2026-04-09",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0018",
+      "usuarioId": "U006",
+      "fechaInicio": "2026-01-12",
+      "fechaDevolucion": "2026-03-13",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0005",
+      "usuarioId": "U001",
+      "fechaInicio": "2025-12-01",
+      "fechaDevolucion": "2025-12-15",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0005",
+      "usuarioId": "U002",
+      "fechaInicio": "2026-02-12",
+      "fechaDevolucion": "2026-03-14",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0007",
+      "usuarioId": "U003",
+      "fechaInicio": "2026-01-02",
+      "fechaDevolucion": "2026-03-03",
+      "devuelto": true
+    },
+    {
+      "libroIsbn": "978-84-0007",
+      "usuarioId": "U005",
+      "fechaInicio": "2026-03-01",
+      "fechaDevolucion": "2026-03-31",
+      "devuelto": false
+    },
+    {
+      "libroIsbn": "978-84-0002",
+      "usuarioId": "U006",
+      "fechaInicio": "2026-03-02",
+      "fechaDevolucion": "2026-05-01",
+      "devuelto": false
+    }
+  ]
+}
