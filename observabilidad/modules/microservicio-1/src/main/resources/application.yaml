@@ -1,6 +1,6 @@
 spring:
   application:
-    name: observabilidad
+    name: microservicio-1
 
 management:
   tracing:
@@ -23,3 +23,11 @@ management:
 logging:
   level:
     org.springframework.web: INFO
+
+server:
+  port: 8081
+  shutdown: immediate
+
+jwt:
+  secret: CeAIgCVfNlhJhRLNiwyTK6WMAYj6o7tTuf+0qMxN0fQ=
+  expiration: 86400000

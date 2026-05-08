@@ -4,7 +4,7 @@ server:
 app:
   messaging:
     # "spring" o "rabbitmq"
-    type: rabbitmq
+    type: spring
 
 spring:
   application:

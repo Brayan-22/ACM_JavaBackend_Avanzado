@@ -1,4 +1,4 @@
-package com.acm.observabilidad;
+package com.acm.microservicio1;
 
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender;
