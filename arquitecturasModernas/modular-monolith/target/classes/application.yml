@@ -1,0 +1,32 @@
+server:
+  port: 8085
+
+app:
+  messaging:
+    # "spring" o "rabbitmq"
+    type: rabbitmq
+
+spring:
+  application:
+    name: modular-monolith
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/modular_db
+    username: modular_user
+    password: modular_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

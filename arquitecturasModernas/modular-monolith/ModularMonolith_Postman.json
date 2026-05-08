@@ -1,0 +1,210 @@
+{
+  "info": {
+    "name": "Catálogo de Arquitecturas: Monolito Modular",
+    "description": "Colección para probar el flujo de creación de Productos, Inventarios, Órdenes y Usuarios para el Monolito Modular guiado por Eventos.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Módulo de Producto",
+      "item": [
+        {
+          "name": "Crear Producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Teclado Mecánico RGB\",\n  \"precio\": 120.00,\n  \"activo\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/modular/producto",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "producto"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Todos los Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/modular/producto",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "producto"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Módulo de Inventario",
+      "item": [
+        {
+          "name": "Inicializar Inventario de Producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productoId\": 1,\n  \"stock\": 50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/modular/inventario",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "inventario"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Verificar Stock",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/modular/inventario/producto/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "inventario",
+                "producto",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Módulo de Orden",
+      "item": [
+        {
+          "name": "Crear Orden de Compra",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"montoTotal\": 240.00,\n  \"items\": [\n    {\n      \"productoId\": 1,\n      \"cantidad\": 2,\n      \"precioSnapshot\": 120.00\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/modular/orden",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "orden"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Obtener Órdenes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/modular/orden",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "orden"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Módulo de Usuario",
+      "item": [
+        {
+          "name": "Crear Usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"estudiante_java\",\n  \"password\": \"secreta\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/modular/user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "user"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Ver Usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/modular/user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "modular",
+                "user"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8085",
+      "type": "string"
+    }
+  ]
+}

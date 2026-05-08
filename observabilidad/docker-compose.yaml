@@ -1,0 +1,66 @@
+version: "3.8"
+
+services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    command: ["--config=/etc/otel/config.yaml"]
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel/config.yaml
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+      - "8889:8889"
+    depends_on:
+      - tempo
+      - loki
+    networks:
+      - grafana-network
+
+  loki:
+    image: grafana/loki:latest
+    user: "0"   # corre como root para evitar problemas de permisos en volumes
+    command: ["-config.file=/etc/loki/config.yaml"]
+    volumes:
+      - ./loki-config.yaml:/etc/loki/config.yaml
+      - loki-data:/loki
+    ports:
+      - "3100:3100"
+    networks:
+      - grafana-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - grafana-network
+
+  tempo:
+    image: grafana/tempo:latest
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./tempo.yaml:/etc/tempo.yaml
+    ports:
+      - "3200:3200"
+    networks:
+      - grafana-network
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+      - tempo
+      - loki
+    networks:
+      - grafana-network
+
+volumes:
+  loki-data:
+
+networks:
+  grafana-network:
+    driver: bridge

@@ -2,7 +2,7 @@ package acm.javaspring.persistenciaavanzada.controller;
 
 import acm.javaspring.persistenciaavanzada.dto.CreateOrderRequestDTO;
 import acm.javaspring.persistenciaavanzada.dto.OrderResponseDTO;
-import acm.javaspring.persistenciaavanzada.service.OrderService;
+import acm.javaspring.persistenciaavanzada.service.IOrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final OrderService orderService;
+    private final IOrderService orderService;
 
     @PostMapping
     public OrderResponseDTO create(@RequestBody @Valid CreateOrderRequestDTO request) {

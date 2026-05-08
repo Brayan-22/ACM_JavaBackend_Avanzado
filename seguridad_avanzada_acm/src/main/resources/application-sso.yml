@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    with-credentials: true
+
+spring:
+  config:
+    activate:
+      on-profile: sso
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak-sso:
+            client-id: spring-boot-client
+            client-secret: d2MjDMGJG2cGxGl4Nh3UVEXMik05t99Z
+            scope: openid, profile, email
+        provider:
+          keycloak-sso:
+            issuer-uri: http://localhost:8081/realms/myrealm

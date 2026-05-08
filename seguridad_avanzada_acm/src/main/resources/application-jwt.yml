@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: jwt
+app:
+  jwtSecret: 5367566B5970337336763979244226452948404D635166546A576E5A72347437
+  jwtExpirationMs: 86400000 # 24 hours

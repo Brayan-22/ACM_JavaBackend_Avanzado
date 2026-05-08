@@ -33,6 +33,7 @@ public class ProductEntity extends AuditableEntity{
     private Integer stock;
 
     @Column(nullable = false)
+    @Builder.Default
     private boolean deleted = false;
 
     public void decreaseStock(int quantity) {

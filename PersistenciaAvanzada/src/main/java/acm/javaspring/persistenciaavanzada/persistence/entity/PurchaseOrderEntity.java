@@ -1,5 +1,6 @@
 package acm.javaspring.persistenciaavanzada.persistence.entity;
 
+import acm.javaspring.persistenciaavanzada.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;
 

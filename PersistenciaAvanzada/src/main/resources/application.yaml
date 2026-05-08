@@ -12,13 +12,9 @@ spring:
       hibernate:
         format_sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  docker:
-    compose:
-      file: docker-compose.yaml
-      enabled: false
   data:
     jdbc:
-      dialect: postgresql
+      dialect: PostgreSQL
 server:
   port: 8080
 

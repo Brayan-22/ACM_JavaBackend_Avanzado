@@ -1,0 +1,15 @@
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/orders/OrderController.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/VerticalApp.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/products/ProductFacadeImpl.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/products/Product.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/orders/OrderRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/orders/OrderItem.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/products/ProductFacade.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/users/UserInternal.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/users/UserFacade.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/products/ProductController.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/users/UserEntity.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/inventory/InventoryFacade.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/inventory/InventoryInternal.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/products/ProductRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/vertical-slice/src/main/java/com/architecture/vertical/features/orders/Order.java

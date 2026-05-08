@@ -1,0 +1,15 @@
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/repository/OrderRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/entity/Inventory.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/BadApp.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/entity/Order.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/entity/User.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/repository/UserRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/service/InventoryAllPowerfulService.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/controller/UserController.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/repository/InventoryRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/controller/ProductController.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/entity/Product.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/repository/ProductRepository.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/controller/OrderController.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/entity/OrderItem.java
+/home/alejandro/Documentos/ACM/ACM_JavaBackend_Avanzado/arquitecturasModernas/bad-example-horizontal/src/main/java/com/architecture/bad/controller/InventoryController.java

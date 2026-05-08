@@ -1,0 +1,41 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: "0.0.0.0:4317"
+      http:
+        endpoint: "0.0.0.0:4318"
+
+exporters:
+  # Logs → Loki via OTLP HTTP (Loki 2.9+ soporta endpoint /otlp)
+  otlphttp/loki:
+    endpoint: "http://loki:3100/otlp"
+    tls:
+      insecure: true
+
+  # Trazas → Tempo
+  otlp/tempo:
+    endpoint: "http://tempo:4317"
+    tls:
+      insecure: true
+
+  # Métricas → Prometheus (scrape)
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+  debug:
+    verbosity: basic
+
+service:
+  pipelines:
+    logs:
+      receivers: [otlp]
+      exporters: [otlphttp/loki, debug]
+
+    traces:
+      receivers: [otlp]
+      exporters: [otlp/tempo, debug]
+
+    metrics:
+      receivers: [otlp]
+      exporters: [prometheus, debug]

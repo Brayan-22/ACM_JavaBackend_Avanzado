@@ -1,0 +1,17 @@
+com/architecture/bad/entity/Order.class
+com/architecture/bad/controller/OrderController$OrderRequest$ItemRequest.class
+com/architecture/bad/repository/UserRepository.class
+com/architecture/bad/controller/InventoryController.class
+com/architecture/bad/controller/OrderController$OrderRequest.class
+com/architecture/bad/repository/OrderRepository.class
+com/architecture/bad/entity/Product.class
+com/architecture/bad/controller/ProductController.class
+com/architecture/bad/entity/User.class
+com/architecture/bad/entity/OrderItem.class
+com/architecture/bad/controller/UserController.class
+com/architecture/bad/entity/Inventory.class
+com/architecture/bad/controller/OrderController.class
+com/architecture/bad/BadApp.class
+com/architecture/bad/service/InventoryAllPowerfulService.class
+com/architecture/bad/repository/ProductRepository.class
+com/architecture/bad/repository/InventoryRepository.class

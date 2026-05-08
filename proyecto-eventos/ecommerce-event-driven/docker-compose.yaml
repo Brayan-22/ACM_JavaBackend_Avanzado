@@ -1,0 +1,126 @@
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.12-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - ecommerce-network
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - ./enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./definitions.json:/etc/rabbitmq/definitions.json
+  orders-db:
+    image: postgres:15-alpine
+    container_name: orders-db
+    environment:
+      POSTGRES_DB: orders_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    networks:
+      - ecommerce-network
+  inventory-db:
+    container_name: inventory-db
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: inventory_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    networks:
+      - ecommerce-network
+  payment-db:
+    container_name: payment-db
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: payment_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5434:5432"
+    networks:
+      - ecommerce-network
+  shipping-db:
+    container_name: shipping-db
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: shipping_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5435:5432"
+    networks:
+      - ecommerce-network
+  order-service:
+    container_name: order-service
+    build: ./order-service
+    ports:
+      - "8081:8081"
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      DATABASE_URL: jdbc:postgresql://orders-db:5432/orders_db
+      SERVER_PORT: 8081
+    depends_on:
+      - rabbitmq
+      - orders-db
+    networks:
+      - ecommerce-network
+  inventory-service:
+    container_name: inventory-service
+    build: ./inventory-services
+    ports:
+      - "8082:8082"
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      DATABASE_URL: jdbc:postgresql://inventory-db:5432/inventory_db
+      SERVER_PORT: 8082
+    depends_on:
+      - rabbitmq
+      - inventory-db
+    networks:
+      - ecommerce-network
+  payment-service:
+    container_name: payment-service
+    build: ./payment-service
+    ports:
+      - "8083:8083"
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      DATABASE_URL: jdbc:postgresql://payment-db:5432/payment_db
+      SERVER_PORT: 8083
+    depends_on:
+      - rabbitmq
+      - payment-db
+    networks:
+      - ecommerce-network
+  shipping-service:
+    container_name: shipping-service
+    build: ./shipping-service
+    ports:
+      - "8084:8084"
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      DATABASE_URL: jdbc:postgresql://shipping-db:5432/shipping_db
+      SERVER_PORT: 8084
+    depends_on:
+      - rabbitmq
+      - shipping-db
+    networks:
+      - ecommerce-network
+networks:
+  ecommerce-network:
+    driver: bridge
+volumes:
+  rabbitmq_data:
+    driver: local

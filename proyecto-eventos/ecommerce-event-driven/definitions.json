@@ -1,0 +1,109 @@
+{
+  "rabbit_version": "3.12",
+  "policies": [],
+  "queues": [
+    {
+      "name": "q.order.out-of-stock",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "q.order.payment-failed",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "q.inventory.order-placed",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "q.inventory.payment-failed",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "q.payment.stock-reserved",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "q.shipping.payment-success",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "ecommerce",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.order.out-of-stock",
+      "destination_type": "queue",
+      "routing_key": "inventory.out",
+      "arguments": {}
+    },
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.order.payment-failed",
+      "destination_type": "queue",
+      "routing_key": "payment.failed",
+      "arguments": {}
+    },
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.inventory.order-placed",
+      "destination_type": "queue",
+      "routing_key": "order.placed",
+      "arguments": {}
+    },
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.inventory.payment-failed",
+      "destination_type": "queue",
+      "routing_key": "payment.failed",
+      "arguments": {}
+    },
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.payment.stock-reserved",
+      "destination_type": "queue",
+      "routing_key": "inventory.reserved",
+      "arguments": {}
+    },
+    {
+      "source": "ecommerce",
+      "vhost": "/",
+      "destination": "q.shipping.payment-success",
+      "destination_type": "queue",
+      "routing_key": "payment.success",
+      "arguments": {}
+    }
+  ]
+}

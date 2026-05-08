@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: payment-service
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+  datasource:
+    url: ${DATABASE_URL}
+    hikari:
+      username: admin
+      password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+server:
+  port: ${SERVER_PORT:8083}
+  
