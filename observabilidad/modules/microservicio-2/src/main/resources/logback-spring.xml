@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!-- JSON Encoder -->
+    <appender name="json" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"app":"${spring.application.name}"}</customFields>
+            <provider class="net.logstash.logback.composite.loggingevent.LoggingEventFormattedTimestampJsonProvider">
+                <timeZone>UTC</timeZone>
+            </provider>
+        </encoder>
+    </appender>
+
+    <!-- OpenTelemetry Appender para trazas -->
+    <appender name="opentelemetry" class="io.opentelemetry.instrumentation.logback.appender.v1_0.OpenTelemetryAppender">
+    </appender>
+
+    <appender name="asyncOpenTelemetry" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <appender-ref ref="opentelemetry"/>
+    </appender>
+
+    <logger name="com.acm" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="json"/>
+        <appender-ref ref="asyncOpenTelemetry"/>
+    </root>
+</configuration>
